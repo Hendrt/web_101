@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 
 app = Flask(__name__)
@@ -14,3 +14,8 @@ def home_page():
 def about():
     return "this is the about page"
 
+
+
+@app.route("/")
+def home_page():
+    return "render_template ("index.html")
